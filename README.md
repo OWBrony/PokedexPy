@@ -13,7 +13,8 @@
 # Cloud Database
 
 {Describe the cloud database you are using.}
-
+The API used in this is the PokeAPI. This is an API with information on Pokemon
+that is available for anyone to pull from.
 {Describe the structure of the database that you created.}
 
 # Development Environment
@@ -27,6 +28,7 @@
 {Make a list of websites that you found helpful in this project}
 * [W3Schools](https://www.w3schools.com/python/)
 * [Dataquest](https://www.dataquest.io/blog/python-api-tutorial/)
+* [Pygame documentation](https://www.pygame.org/docs/)
 
 # Future Work
 
