@@ -1,4 +1,5 @@
 import pygame
+from Constants import *
 
 class display:
     """This is where the video output should be coming out
@@ -7,6 +8,8 @@ class display:
     def __init__(self, debug = False):
         """Builds a new display from the debug."""
         self._debug = debug
+        self.running = True
+        self.display = pygame.display.init()
 
     def close_window(self):
         pygame.display.quit()
@@ -17,6 +20,13 @@ class display:
             self._draw_grid()
 
     def open_window(self):
-        pygame.display.init()
-        pygame.display.set_mode(size=(MAX_HEIGHT,MAX_WIDTH))
+        self.display.set_mode(size=(600,800))
+
+    def is_running():
+        for event in pygame.event.get():
+            if event.type == pygame.QUIT:
+                self.running = False
+
+    def _draw_grid():
+        pass
         

@@ -29,6 +29,7 @@ that is available for anyone to pull from.
 * [W3Schools](https://www.w3schools.com/python/)
 * [Dataquest](https://www.dataquest.io/blog/python-api-tutorial/)
 * [Pygame documentation](https://www.pygame.org/docs/)
+* [GeeksForGeeks](https://www.geeksforgeeks.org/how-to-make-a-pygame-window/)
 
 # Future Work
 
