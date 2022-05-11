@@ -1,5 +1,6 @@
 import pygame
 from Constants import *
+from sys import exit
 
 class display:
     """This is where the video output should be coming out
@@ -13,6 +14,7 @@ class display:
 
     def close_window(self):
         pygame.display.quit()
+        exit()
 
     def clear_buffer(self):
         pygame.display.update()
@@ -24,8 +26,8 @@ class display:
 
     def is_running():
         for event in pygame.event.get():
-            if event.type == pygame.QUIT:
-                self.running = False
+            if event.type == pygame.display.QUIT:
+                return False
 
     def _draw_grid():
         pass
