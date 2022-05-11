@@ -14,7 +14,6 @@ class display:
 
     def close_window(self):
         pygame.display.quit()
-        exit()
 
     def clear_buffer(self):
         pygame.display.update()
@@ -24,10 +23,11 @@ class display:
     def open_window(self):
         pygame.display.set_mode(size=(800,600))
 
-    def is_running():
-        for event in pygame.event.get():
-            if event.type == pygame.display.QUIT:
-                return False
+    def is_running(self):
+        while self.is_running:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    return False
 
     def _draw_grid():
         pass
