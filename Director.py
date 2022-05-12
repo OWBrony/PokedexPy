@@ -11,7 +11,8 @@ class director:
 
     def run_game(self):
         run = True
+        self._video_service.open_window()
         while run:
-            self._video_service.open_window()
             run = self._video_service.is_running()
+            self._video_service.clear_buffer()
         self._video_service.close_window()
