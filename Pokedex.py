@@ -1,6 +1,6 @@
 import requests
 import pygame
-from Display import display 
+from services.Display import display 
 from Constants import *
 from Director import director
 

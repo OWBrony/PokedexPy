@@ -1,4 +1,4 @@
-National_List = {
+kanto_list = {
     "1" : "bulbasaur",
     "2" : "ivysaur",
     "3" : "venusaur",
