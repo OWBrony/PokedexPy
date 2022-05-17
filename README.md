@@ -31,6 +31,7 @@ that is available for anyone to pull from.
 * [Pygame documentation](https://www.pygame.org/docs/)
 * [GeeksForGeeks](https://www.geeksforgeeks.org/how-to-make-a-pygame-window/)
 * [Python-forum.io] (https://python-forum.io/thread-10567.html)
+* [Stack Overflow] (https://stackoverflow.com/questions/43046376/how-to-change-an-image-size-in-pygame)
 
 # Future Work
 

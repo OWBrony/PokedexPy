@@ -1,6 +1,8 @@
+import pygame
 from services.Display import display 
 from Constants import *
-from sys import exit
+from items.artifact import Artifact
+from items.image import Image
 
 class director:
     
@@ -11,8 +13,14 @@ class director:
 
     def run_game(self):
         run = True
+        current_pokemon = Image()
+        current_pokemon.get_image(IMAGE_DEFAULT)
         self._video_service.open_window()
         while run:
-            run = self._video_service.is_running()
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    run = False
+            current_pokemon.show_image()
             self._video_service.clear_buffer()
+            # run = self._video_service.is_running()
         self._video_service.close_window()

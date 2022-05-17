@@ -1,4 +1,4 @@
-class Object:
+class Artifact:
     def __init__(self):
         """This is to create a new object"""
         pass
