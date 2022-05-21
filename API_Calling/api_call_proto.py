@@ -13,15 +13,15 @@ def get_data():
     pokemon = input("What pokemon do you want? ")
     response_API = requests.get(f"{BASE_URL}{pokemon}")
     data = response_API.text
-    json.loads(data)
-    parse_json
-    return data
+    holder = json.loads(data)
+    # parse_json
+    return holder
 
 def place_data(data):
     RESULTS = data
 
 def print_data(data):
-    print(data.abilities)
+    print(data["abilities"])
 
 def main():
     holder = get_data()
