@@ -32,6 +32,7 @@ that is available for anyone to pull from.
 * [GeeksForGeeks](https://www.geeksforgeeks.org/how-to-make-a-pygame-window/)
 * [Python-forum.io] (https://python-forum.io/thread-10567.html)
 * [Stack Overflow] (https://stackoverflow.com/questions/43046376/how-to-change-an-image-size-in-pygame)
+* [freecodecamp] (https://www.freecodecamp.org/news/how-to-get-started-with-firebase-using-python/)
 
 # Future Work
 
