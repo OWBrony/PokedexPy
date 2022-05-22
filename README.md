@@ -1,16 +1,13 @@
 # Overview
 
 This is a program to pull info from the pokeAPI and display
-it for the user
-{Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
+it for the user. My intent is to learn how to pull from an external database
+and display it for the user.
 
-{Provide a description the software that you wrote and how it integrates with a Cloud Database.  Describe how to use your program.}
+Currently, this program is in parts. The part responsible for calling data is the api_call_proto.py in the API_Calling folder.
+It is currently set up to display the abilities of an entered pokemon name.
 
-{Describe your purpose for writing this software.}
-
-{Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/rTHXV1T0aGk)
 
 # Cloud Database
 
@@ -18,13 +15,12 @@ it for the user
 The API used in this is the PokeAPI. This is an API with information on Pokemon
 that is available for anyone to pull from.
 {Describe the structure of the database that you created.}
+Currently, a database to write to is not implemented.
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
-
-{Describe the programming language that you used and any libraries.}
-
+Currently, this program uses the Pygame, Firebase_Admin, Json and request libraries
+The language that I am using is the python language.
 # Useful Websites
 
 {Make a list of websites that you found helpful in this project}
@@ -39,6 +35,6 @@ that is available for anyone to pull from.
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* Add full interface
+* Complete API draw
+* Combine the two arts of the program
