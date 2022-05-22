@@ -1,5 +1,7 @@
 # Overview
 
+This is a program to pull info from the pokeAPI and display
+it for the user
 {Important!  Do not say in this section that this is college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
 {Provide a description the software that you wrote and how it integrates with a Cloud Database.  Describe how to use your program.}
