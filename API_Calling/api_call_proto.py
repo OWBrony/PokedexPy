@@ -8,29 +8,45 @@ ref = "C:/Users/bgfra/Downloads/pokedexpy-firebase-adminsdk-2s83s-3c54b27850.jso
 BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
 RESULTS = None
 
-# cred_obj = firebase_admin.credentials.Certificate(ref)
-# default_app = firebase_admin.initialize_app(cred_obj, {
-# 	'https://pokedexpy-default-rtdb.firebaseio.com/':databaseURL
-# 	})
+pokemon_name = ""
+first_ability = ""
 
-# def convert_to_json(response):
-#     return json.loads(response)
-
-#     pass
+def check_data(name):
+    if name.lower() == "farfetch'd":
+        return "farfetchd"
+    elif name.lower() == "mr. mime" or name.lower() == "mr.mime" or name.lower() == "mr mime":
+        return "mr-mime"
+    elif name.lower() == "nidoran f" or name.lower() == "nidoran ♀" or name.lower() == "nidoran♀" or name.lower() == "nidoran female":
+        return "nidoran-f"
+    elif name.lower() == "nidoran m" or name.lower() == "nidoran ♂" or name.lower() == "nidoran♂" or name.lower() == "nidoran male":
+        return "nidoran-m"
+    else:
+        return name.lower()
 
 def get_data():
     pokemon = input("What pokemon do you want? ")
-    response_API = requests.get(f"{BASE_URL}{pokemon}")
-    data = response_API.json()
-    # holder = json.loads(data)
-    # parse_json
-    return data
+    corrected = check_data(pokemon)
+    response_API = requests.get(f"{BASE_URL}{corrected}")
+    if not response_API:
+        return
+    else:
+        data = response_API.json()
+        # set the pokemon's data
+        set_info(pokemon, data)
+        return data
+
+def set_info(name, data):
+    
+    pass
 
 def place_data(data):
     RESULTS = data
 
 def print_data(data):
-    print(data["abilities"][0]["ability"]["name"])
+    if not data:
+        print("No Data")
+    else:
+        print(data["abilities"][0]["ability"]["name"])
 
 def send_data(data):
     pass
