@@ -21,16 +21,16 @@ RESULTS = None
 def get_data():
     pokemon = input("What pokemon do you want? ")
     response_API = requests.get(f"{BASE_URL}{pokemon}")
-    data = response_API.text
-    holder = json.loads(data)
+    data = response_API.json()
+    # holder = json.loads(data)
     # parse_json
-    return holder
+    return data
 
 def place_data(data):
     RESULTS = data
 
 def print_data(data):
-    print(data["abilities"])
+    print(data["abilities"][0]["ability"]["name"])
 
 def send_data(data):
     pass
