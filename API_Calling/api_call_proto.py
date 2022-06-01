@@ -10,7 +10,13 @@ RESULTS = None
 
 pokemon_name = ""
 first_ability = ""
-sprite = ""
+SPRITE = ""
+HEALTH = 0
+ATTACK = 0
+DEFENCE = 0
+SPEC_ATTACK = 0
+SPEC_DEFENCE = 0
+SPEED = 0
 
 def check_data(name):
     if name.lower() == "farfetch'd":
@@ -33,12 +39,22 @@ def get_data():
     else:
         data = response_API.json()
         # set the pokemon's data
-        set_info(data)
         return data
 
 def set_info(data):
-    sprite = data["sprites"]["front_default"]
-    pass
+    SPRITE = data["sprites"]["front_default"]
+    holder1 = data["stats"][0]["base_stat"]
+    holder2 = data["stats"][1]["base_stat"]
+    holder3 = data["stats"][2]["base_stat"]
+    holder4 = data["stats"][3]["base_stat"]
+    holder5 = data["stats"][4]["base_stat"]
+    holder6 = data["stats"][5]["base_stat"]
+    HEALTH = holder1
+    ATTACK = holder2
+    DEFENCE = holder3
+    SPEC_ATTACK = holder4
+    SPEC_DEFENCE = holder5
+    SPEED = holder6
 
 def place_data(name,data):
     RESULTS = data
@@ -47,8 +63,15 @@ def _print_data(data):
     if not data:
         print("No Data")
     else:
-        print(f"{data['stats'][0]['stat']['name']}: {data['stats'][0]['stat']['base_stat']}")
         print(data["abilities"][0]["ability"]["name"])
+        print(HEALTH)
+        print(ATTACK)
+        print(DEFENCE)
+        print(SPEC_ATTACK)
+        print(SPEC_DEFENCE)
+        print(SPEED)
+        # print(f"{data['stats'][0]['base_stat']['stat']['name']}: {data['stats'][0]['stat']}")
+        
         # ["abilities"][0]["ability"]["name"]
 
 def send_data(data):
@@ -56,8 +79,10 @@ def send_data(data):
 
 def main():
     holder = get_data()
+    if holder:
+        set_info(holder)
     # place_data(holder)
-    _print_data(holder)
+        _print_data(holder)
 
 if __name__ == "__main__":
     main()

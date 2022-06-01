@@ -57,4 +57,11 @@ class Caller():
         if data["abilities"][2]["ability"]["is_hidden"] == "T":
             self.hidden_ability = data["abilities"][2]["ability"]["name"]
         self.sprite = data["sprites"]["front_default"]
+        sprite = data["sprites"]["front_default"]
+        hp = data["stats"][0]["base_stat"]
+        attack = data["stats"][1]["base_stat"]
+        defence = data["stats"][2]["base_stat"]
+        special_a = data["stats"][3]["base_stat"]
+        special_d = data["stats"][4]["base_stat"]
+        speed = data["stats"][5]["base_stat"]
         
