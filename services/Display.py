@@ -21,7 +21,7 @@ class display:
             self._draw_grid()
 
     def open_window(self):
-        pygame.display.set_mode(size=(800,600))
+        pygame.display.set_mode(SCREEN_SIZE)
 
     # def is_running(self):
     #     while self.is_running:

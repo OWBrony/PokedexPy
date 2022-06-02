@@ -3,21 +3,28 @@ import json
 
 class Caller():
     def __init__(self):
+        # Pokemon name
         self.pokemon_name = ""
+        # Pokemon abilities
         self.first_ability = ""
         self.second_ability = ""
         self.hidden_ability = ""
+        # Pokemon stats
         self.health = 0
         self.attack = 0
         self.defense = 0
         self.spec_attack = 0
         self.spec_defense = 0
         self.speed = 0
-        self. stat_total = (self.health + self.attack + self.defense +
+        # The base stat total 
+        self.stat_total = (self.health + self.attack + self.defense +
         self.spec_attack + self.spec_defense + self.speed)
+        # This will hold the sprite to display
         self.sprite = None
 
     def check_data(self,name):
+        """This is to change the given Pokemon's name into
+        an appropriate format."""
         if name.lower() == "farfetch'd":
             return "farfetchd"
         elif name.lower() == "mr. mime" or name.lower() == "mr.mime" or name.lower() == "mr mime":
@@ -49,6 +56,7 @@ class Caller():
     
     def set_info(self, data):
         """This is to set all the info for the pokemon"""
+        # check how many abilities the pokemon has.
         self.first_ability = data["abilities"][0]["ability"]["name"]
         if data["abilities"][1]["ability"]["name"]:
             self.second_ability = data["abilities"][1]["ability"]["name"]
@@ -57,11 +65,10 @@ class Caller():
         if data["abilities"][2]["ability"]["is_hidden"] == "T":
             self.hidden_ability = data["abilities"][2]["ability"]["name"]
         self.sprite = data["sprites"]["front_default"]
-        sprite = data["sprites"]["front_default"]
-        hp = data["stats"][0]["base_stat"]
-        attack = data["stats"][1]["base_stat"]
-        defence = data["stats"][2]["base_stat"]
-        special_a = data["stats"][3]["base_stat"]
-        special_d = data["stats"][4]["base_stat"]
-        speed = data["stats"][5]["base_stat"]
+        self.health = data["stats"][0]["base_stat"]
+        self.attack = data["stats"][1]["base_stat"]
+        self.defense = data["stats"][2]["base_stat"]
+        self.spec_attack = data["stats"][3]["base_stat"]
+        self.spec_defense = data["stats"][4]["base_stat"]
+        self.speed = data["stats"][5]["base_stat"]
         
