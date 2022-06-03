@@ -22,12 +22,7 @@ class display:
 
     def open_window(self):
         pygame.display.set_mode(SCREEN_SIZE)
-
-    # def is_running(self):
-    #     while self.is_running:
-    #         for event in pygame.event.get():
-    #             if event.type == pygame.QUIT:
-    #                 return False
+        
     def draw_image(self, image, position):
         """Draws the given image on the buffer at the given position. The image won't appear
         on the screen until flush_buffer() is called.
