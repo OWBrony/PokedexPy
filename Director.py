@@ -33,7 +33,7 @@ class director:
                     run = False
                 # This is to check if the user clicked on the search bar
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if text_bar.collide_point(pygame.mouse.get_pos):
+                    if text_bar.rectangle.collidepoint(pygame.mouse.get_pos):
                         text_bar.active = True
                         text_bar.select_color()
                     else:

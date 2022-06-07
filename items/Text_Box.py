@@ -42,9 +42,10 @@ class text_box():
         self.rectangle = pygame.draw.rect(self.display, self.color, self._input_box)
         # self.display.blit(self.display, (400,20))
 
-    def collide_point(self,position):
-        if self.rectangle.collidepoint((position)):
-            return True
-        else:
-            return False
+    # def collide_point(self,position):
+    #     x,y = position.split(",")
+    #     if self.rectangle.collidepoint(x,y):
+    #         return True
+    #     else:
+    #         return False
 
