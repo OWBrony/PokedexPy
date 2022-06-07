@@ -26,7 +26,6 @@ class director:
         self._video_service.open_window()
         # This is meant to initialize the search bar.
         text_bar = text_box(self._video_service)
-        # kanto_scrollbar = scroller(kanto_list, "kanto")
         while run:
             # This checks for the user closing the window
             for event in pygame.event.get():
@@ -34,7 +33,7 @@ class director:
                     run = False
                 # This is to check if the user clicked on the search bar
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if text_bar.collidepoint(event.pos):
+                    if text_bar.collide_point(pygame.mouse.get_pos):
                         text_bar.active = True
                         text_bar.select_color()
                     else:
@@ -47,7 +46,7 @@ class director:
                         text_bar.user_text = text_bar.user_text[:-1]
                     else:
                         text_bar.user_text += event.unicode
-            text_box.draw_rect(self)
+            text_bar.draw_rect(self._video_service)
             # This is to display the image that was chosen
             current_pokemon.show_image()
             # kanto_scrollbar

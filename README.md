@@ -30,12 +30,13 @@ The language that I am using is the python language.
 * [GeeksForGeeks on windows](https://www.geeksforgeeks.org/how-to-make-a-pygame-window/)
 * [GeeksforGeeks on text boxes](https://www.geeksforgeeks.org/how-to-create-a-text-input-box-with-pygame/)
 * [Python-forum.io] (https://python-forum.io/thread-10567.html)
-* [Stack Overflow] (https://stackoverflow.com/questions/43046376/how-to-change-an-image-size-in-pygame)
+* [Stack Overflow](https://stackoverflow.com/questions/43046376/how-to-change-an-image-size-in-pygame)
 * [freecodecamp] (https://www.freecodecamp.org/news/how-to-get-started-with-firebase-using-python/)
-
+* [Drawing Rectangles](https://stackoverflow.com/questions/19780411/pygame-drawing-a-rectangle)
+* [Collide point](https://www.codegrepper.com/code-examples/python/how+to+check+if+mouse+is+over+a+rect+in+pygame)
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
 * Add full interface
-* Complete API draw
-* Combine the two arts of the program
+* Make search box
+* Make The data diplay on the right side

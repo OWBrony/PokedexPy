@@ -1,6 +1,5 @@
 import pygame
 from Constants import *
-from sys import exit
 
 class display:
     """This is where the video output should be coming out
