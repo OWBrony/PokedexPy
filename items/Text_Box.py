@@ -13,8 +13,12 @@ class text_box():
         self.base_font = pygame.font.Font(None, 32)
         # To set the text in the text box
         self.user_text = ""
-        # to set the size of the box
-        self.input_box = (400, 300, 100, 32)
+        # To set the size of the box
+        # First value: How far to the right
+        # Second value: How far from the top
+        # Third value: How long the box will be
+        # Fourth value: How thick the box will be
+        self.input_box = (80, 425, 250, 32)
         # Flag for deciding the color
         self.active = False
         # set the color
