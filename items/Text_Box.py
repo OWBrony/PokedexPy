@@ -18,7 +18,7 @@ class text_box():
         # Second value: How far from the top
         # Third value: How long the box will be
         # Fourth value: How thick the box will be
-        self.input_box = (80, 425, 250, 32)
+        self._input_box = (80, 425, 250, 32)
         # Flag for deciding the color
         self.active = False
         # set the color
@@ -39,7 +39,7 @@ class text_box():
             self.color = self.color_passive
 
     def draw_rect(self,screen):
-        self.rectangle = pygame.draw.rect(self.display, self.color, self.input_box)
+        self.rectangle = pygame.draw.rect(self.display, self.color, self._input_box)
         # self.display.blit(self.display, (400,20))
 
     def collide_point(self,position):
