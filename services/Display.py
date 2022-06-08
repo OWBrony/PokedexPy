@@ -52,4 +52,3 @@ class display:
 
     def _draw_grid():
         pass
-        

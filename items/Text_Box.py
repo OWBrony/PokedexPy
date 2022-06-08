@@ -6,7 +6,7 @@ class text_box():
     def __init__(self, display):
         pygame.init()
         # The imported screen
-        self.screen = display
+        # self.screen = display
         # Clock for refresh
         self.clock = pygame.time.Clock()
         # Sets the font
@@ -29,6 +29,7 @@ class text_box():
         self.display = pygame.display.set_mode((MAX_WIDTH,MAX_HEIGHT))
         # to hold the rectangle
         self.rectangle = None
+        # self.text_surface = None 
     
     def select_color(self):
         """This should set the color of the text bar
@@ -40,7 +41,15 @@ class text_box():
 
     def draw_rect(self,screen):
         self.rectangle = pygame.draw.rect(self.display, self.color, self._input_box)
-        # self.display.blit(self.display, (400,20))
+
+    def show_text(self):
+        text_surface = self.base_font.render(self.user_text, True, (0,0,0))
+        self.display.blit(text_surface, self.rectangle)
+        pygame.display.update()
+        # input()
+    
+    # def update_rect(self):
+    #     self.screen.update()
 
     # def collide_point(self,position):
     #     x,y = position.split(",")

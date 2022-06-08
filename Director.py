@@ -6,8 +6,6 @@ from items.image import Image
 from items.Text_Box import text_box
 from scroll_bar import scroller
 from resources.kanto_dex import *
-
-
 class director:
     
     def __init__(self):
@@ -33,25 +31,31 @@ class director:
                     run = False
                 # This is to check if the user clicked on the search bar
                 if event.type == pygame.MOUSEBUTTONDOWN:
-                    if text_bar.rectangle.collidepoint(pygame.mouse.get_pos):
+                    if text_bar.rectangle.collidepoint(pygame.mouse.get_pos()):
                         text_bar.active = True
                         text_bar.select_color()
                     else:
                         text_bar.active = False
                         text_bar.select_color()
                 # This is to check if a key was pressed.
-                if event.type == pygame.KEYDOWN:
+                if event.type == pygame.KEYDOWN and text_bar.active:
                     # if backspace remove a letter
                     if event.key == pygame.K_BACKSPACE:
                         text_bar.user_text = text_bar.user_text[:-1]
+                        # text_bar.show_text()
+                    elif event.key == pygame.K_RETURN:
+                        text_bar.active = False
+                        pass
                     else:
                         text_bar.user_text += event.unicode
+                        # text_bar.show_text()
+                        print(text_bar.user_text)
             text_bar.draw_rect(self._video_service)
             # This is to display the image that was chosen
             current_pokemon.show_image()
-            # kanto_scrollbar
+            text_bar.show_text()
             # this is to hopefully refresh the screen
             self._video_service.clear_buffer()
-            # run = self._video_service.is_running()
+            # self._video_service.update()
             clock.tick(60)
         self._video_service.close_window()
