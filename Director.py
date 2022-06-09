@@ -49,7 +49,7 @@ class director:
                     else:
                         text_bar.user_text += event.unicode
                         # text_bar.show_text()
-                        print(text_bar.user_text)
+                        # print(text_bar.user_text)
             text_bar.draw_rect(self._video_service)
             # This is to display the image that was chosen
             current_pokemon.show_image()

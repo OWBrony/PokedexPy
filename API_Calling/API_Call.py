@@ -64,6 +64,7 @@ class Caller():
             self.hidden_ability = data["abilities"][1]["ability"]["name"]
         if data["abilities"][2]["ability"]["is_hidden"] == "T":
             self.hidden_ability = data["abilities"][2]["ability"]["name"]
+        # set the Pokemon stats
         self.sprite = data["sprites"]["front_default"]
         self.health = data["stats"][0]["base_stat"]
         self.attack = data["stats"][1]["base_stat"]

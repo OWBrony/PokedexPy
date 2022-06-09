@@ -25,7 +25,7 @@ class text_box():
         self.color_passive = pygame.Color(142,142,142)
         self.color_active = pygame.Color(255,255,255)
         self.color = self.color_passive
-        # Don't know why I need a second screen but it is here.
+        # This is the display surface. DO NOT DELETE
         self.display = pygame.display.set_mode((MAX_WIDTH,MAX_HEIGHT))
         # to hold the rectangle
         self.rectangle = None
