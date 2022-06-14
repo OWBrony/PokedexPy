@@ -46,7 +46,9 @@ class text_box():
         text_surface = self.base_font.render(self.user_text, True, (0,0,0))
         self.display.blit(text_surface, self.rectangle)
         pygame.display.update()
-        # input()
+
+    def clear_text(self):
+        self.user_text = ""
     
     # def update_rect(self):
     #     self.screen.update()

@@ -1,5 +1,6 @@
 import requests
 import json
+from Constants import *
 
 class Caller():
     def __init__(self):
@@ -44,26 +45,29 @@ class Caller():
         # check_data should correct the name of a pokemon that is passed in.
         # either dealing with names with special characters and/or lowering
         # the case of the name so it can be passed to the API.
-        corrected = check_data(pokemon)
+        corrected = self.check_data(pokemon)
         response_API = requests.get(f"{BASE_URL}{corrected}")
         if not response_API:
             return
         else:
             data = response_API.json()
             # set the pokemon's data
-            set_info(pokemon, data)
+            self.set_info(pokemon, data)
             return data
     
-    def set_info(self, data):
+    def set_info(self, name, data):
         """This is to set all the info for the pokemon"""
+        self.pokemon_name = name
         # check how many abilities the pokemon has.
         self.first_ability = data["abilities"][0]["ability"]["name"]
-        if data["abilities"][1]["ability"]["name"]:
+        if data["abilities"][1]["is_hidden"] == False:
             self.second_ability = data["abilities"][1]["ability"]["name"]
-        elif data["abilities"][1]["ability"]["is_hidden"] == "T":
+        elif data["abilities"][1]["is_hidden"] == True:
             self.hidden_ability = data["abilities"][1]["ability"]["name"]
-        if data["abilities"][2]["ability"]["is_hidden"] == "T":
+        if 2 in data["abilities"]:
             self.hidden_ability = data["abilities"][2]["ability"]["name"]
+        else:
+            pass
         # set the Pokemon stats
         self.sprite = data["sprites"]["front_default"]
         self.health = data["stats"][0]["base_stat"]
