@@ -14,9 +14,10 @@ class Image(Artifact):
         self.image = image_path
 
     def show_image(self):
-        hold = pygame.image.load(self.image)
-        picture = pygame.transform.scale(hold, (MAX_WIDTH/2,MAX_HEIGHT/2))
-        self.display_surface.blit(picture, (0,0))
+        if self.image == IMAGE_DEFAULT:
+            hold = pygame.image.load(self.image)
+            picture = pygame.transform.scale(hold, (MAX_WIDTH/2,MAX_HEIGHT/2))
+            self.display_surface.blit(picture, (0,0))
 
     def set_position(self):
         # self.position = 

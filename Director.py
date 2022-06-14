@@ -99,7 +99,7 @@ class director:
                         else:
                             second_ability_box.recieve_data("None", True)
                         if database_call.hidden_ability:
-                            hidden_ability_box.recieve_data(database_call.hidden_ability)
+                            hidden_ability_box.recieve_data(database_call.hidden_ability,True)
                         else:
                             hidden_ability_box.recieve_data("None", True)
                         hp_box.recieve_data("Health: ",False,database_call.health)
