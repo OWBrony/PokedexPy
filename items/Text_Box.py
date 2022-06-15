@@ -44,6 +44,7 @@ class text_box():
 
     def show_text(self):
         text_surface = self.base_font.render(self.user_text, True, (0,0,0))
+        # first:get what will be displayed, second:the surface that is going to hold the text
         self.display.blit(text_surface, self.rectangle)
         pygame.display.update()
 

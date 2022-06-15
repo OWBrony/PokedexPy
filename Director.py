@@ -112,7 +112,7 @@ class director:
                         text_bar.clear_text()
                         text_bar.active = False
                         text_bar.select_color()
-                        self._video_service.clear_window()
+                        current_pokemon_image.show_image()
                     else:
                         text_bar.user_text += event.unicode
                         # text_bar.show_text()
@@ -151,6 +151,7 @@ class director:
                 speed_box.draw_rect(self._video_service)
                 speed_box.show_text()
             # This is to display the image that was chosen
+            current_pokemon_image.draw_rect(self._video_service)
             current_pokemon_image.show_image()
             
             # this is to hopefully refresh the screen
