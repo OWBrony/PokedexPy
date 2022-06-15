@@ -112,6 +112,7 @@ class director:
                         text_bar.clear_text()
                         text_bar.active = False
                         text_bar.select_color()
+                        self._video_service.clear_window()
                     else:
                         text_bar.user_text += event.unicode
                         # text_bar.show_text()

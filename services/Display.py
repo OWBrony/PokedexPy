@@ -21,6 +21,9 @@ class display:
 
     def open_window(self):
         pygame.display.set_mode(SCREEN_SIZE)
+
+    def clear_window(self):
+        pygame.Surface.fill(self, (0,0,0))
         
     def draw_image(self, image, position):
         """Draws the given image on the buffer at the given position. The image won't appear
