@@ -62,12 +62,10 @@ class Caller():
         self.first_ability = data["abilities"][0]["ability"]["name"]
         if data["abilities"][1]["is_hidden"] == False:
             self.second_ability = data["abilities"][1]["ability"]["name"]
+            self.hidden_ability = data["abilities"][2]["ability"]["name"]
         elif data["abilities"][1]["is_hidden"] == True:
             self.hidden_ability = data["abilities"][1]["ability"]["name"]
-        if 2 in data["abilities"]:
-            self.hidden_ability = data["abilities"][2]["ability"]["name"]
-        else:
-            pass
+            self.second_ability = None
         # set the Pokemon stats
         self.sprite = data["sprites"]["front_default"]
         self.health = data["stats"][0]["base_stat"]

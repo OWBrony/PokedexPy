@@ -90,24 +90,24 @@ class director:
                         text_bar.user_text = text_bar.user_text[:-1]
                         # text_bar.show_text()
                     elif event.key == pygame.K_RETURN:
+                        # get the data
                         database_call.get_data(text_bar.user_text)
+                        # give the sprite url to the image object
                         current_pokemon_image.get_image(database_call.sprite)
                         name_box.recieve_data(database_call.pokemon_name)
-                        first_ability_box.recieve_data(database_call.first_ability)
-                        if database_call.second_ability:
+                        first_ability_box.recieve_data(database_call.first_ability,True)
+                        if database_call.second_ability != None:
                             second_ability_box.recieve_data(database_call.second_ability,True)
                         else:
-                            second_ability_box.recieve_data("None", True)
-                        if database_call.hidden_ability:
-                            hidden_ability_box.recieve_data(database_call.hidden_ability,True)
-                        else:
-                            hidden_ability_box.recieve_data("None", True)
-                        hp_box.recieve_data("Health: ",False,database_call.health)
-                        attack_box.recieve_data("Attack: ",False,database_call.attack)
-                        defence_box.recieve_data("Defence: ",False,database_call.defense)
-                        spec_attack_box.recieve_data("Special Attack: ",False,database_call.spec_attack)
-                        spec_defence_box.recieve_data("Special Defence: ",False,database_call.spec_defense)
-                        speed_box.recieve_data("Speed: ",False,database_call.speed)
+                            second_ability_box.recieve_data("None",True)
+                        hidden_ability_box.recieve_data(database_call.hidden_ability,True)
+                        # set stat values
+                        hp_box.recieve_data("Health",False,database_call.health)
+                        attack_box.recieve_data("Attack",False,database_call.attack)
+                        defence_box.recieve_data("Defence",False,database_call.defense)
+                        spec_attack_box.recieve_data("Special Attack",False,database_call.spec_attack)
+                        spec_defence_box.recieve_data("Special Defence",False,database_call.spec_defense)
+                        speed_box.recieve_data("Speed",False,database_call.speed)
 
                         text_bar.clear_text()
                         text_bar.active = False

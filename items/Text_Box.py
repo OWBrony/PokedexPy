@@ -50,14 +50,4 @@ class text_box():
 
     def clear_text(self):
         self.user_text = ""
-    
-    # def update_rect(self):
-    #     self.screen.update()
-
-    # def collide_point(self,position):
-    #     x,y = position.split(",")
-    #     if self.rectangle.collidepoint(x,y):
-    #         return True
-    #     else:
-    #         return False
 
