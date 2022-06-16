@@ -3,5 +3,5 @@ MAX_WIDTH = 800
 
 SCREEN_SIZE = (800,600)
 
-IMAGE_DEFAULT = "C:/Users/bgfra/Pictures/stock images/Jean pulled from Standard Banner.png"
+IMAGE_DEFAULT = "images/Cinnabar Gym cropped from web search image.png"
 BASE_URL = "https://pokeapi.co/api/v2/pokemon/"
