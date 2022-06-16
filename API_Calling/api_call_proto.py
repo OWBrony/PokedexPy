@@ -1,7 +1,5 @@
 import requests
 import json
-import firebase_admin
-from firebase_admin import credentials
 
 ref = "C:/Users/bgfra/Downloads/pokedexpy-firebase-adminsdk-2s83s-3c54b27850.json"
 

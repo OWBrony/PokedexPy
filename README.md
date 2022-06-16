@@ -4,22 +4,21 @@ This is a program to pull info from the pokeAPI and display
 it for the user. My intent is to learn how to pull from an external database
 and display it for the user.
 
-Currently, this program is in parts. The part responsible for calling data is the api_call_proto.py in the API_Calling folder.
-It is currently set up to display the abilities of an entered pokemon name.
+Currently, this program is in alpha. The part responsible for calling data is the API_Call.py in the API_Calling folder.
+It is currently set up to display the default front sprite, pokemon name, the pokemon's abilities, and their base
+stats.
 
-[Software Demo Video](https://youtu.be/rTHXV1T0aGk)
+[Software Demo Video](https://youtu.be/-A07M4x23Ew)
 
 # Cloud Database
 
 {Describe the cloud database you are using.}
 The API used in this is the PokeAPI. This is an API with information on Pokemon
 that is available for anyone to pull from.
-{Describe the structure of the database that you created.}
-Currently, a database to write to is not implemented.
 
 # Development Environment
 
-Currently, this program uses the Pygame, Firebase_Admin, Json and request libraries
+Currently, this program uses the Pygame, Json and request libraries
 The language that I am using is the python language.
 # Useful Websites
 
@@ -38,6 +37,6 @@ The language that I am using is the python language.
 # Future Work
 
 {Make a list of things that you need to fix, improve, and add in the future.}
-* Add full interface
-* Make search box
-* Make The data diplay on the right side
+* Add pokemon moves
+* Add pokemon types
+* Make the data variable based on generation
